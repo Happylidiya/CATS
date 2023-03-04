@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
 </head>
 <body class="page">
     <header class="header">
         <div class="container header__container">
             <a href="#" class="logo"><i class="fa-solid fa-paw fa-2x"></i> Милые котики</a>
             <button class="btn" id="add"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn" id="login">Войти</button>
         </div>
     </header>
     <main class="main container">
@@ -57,19 +59,34 @@
             </form>
         </div>
     </div>
+
+    <div class="popup popup-login">
+        <div class="popup__container" >
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Авторизация</h2>
+            <form class="form" id="popup-form-login">
+                <input type="email" class="form__input" name="email" required placeholder="email">
+                <input type="password" class="form__input" name="password" placeholder="password">
+                <button type="submit" class="form__btn btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
     <template id="card-template">
         <!-- <DOCUMENT_FRAGMENT> -->
         <div class="card">
-            <img src="#" alt="Изабражение" class="card__image">
+            <img src="#" alt="Изображение" class="card__image">
             <a href="#" class="card__link"><h2 class="card__name"></h2></a>
             <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
         </div>
         <!-- <DOCUMENT_FRAGMENT> -->
     </template>
     <script src="src/cats.js" defer></script>
+    <script src="src/api.js" defer></script>
     <script src="src/popup.js" defer></script>
     <script src="src/popup-image.js" defer></script>
     <script src="src/card.js" defer></script>
     <script src="src/index.js" defer></script>
+
 </body>
 </html>
