@@ -60,6 +60,13 @@
         </div>
     </div>
 
+    <div class="popup popup-cat-info">
+        <div class="popup__container" >
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <div class="popup__content"></div>
+        </div>
+    </div>
+
     <div class="popup popup-login">
         <div class="popup__container" >
             <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
@@ -81,10 +88,30 @@
         </div>
         <!-- <DOCUMENT_FRAGMENT> -->
     </template>
-    <script src="src/cats.js" defer></script>
+
+    <template id="cats-info-template">
+        <div class="cat-info">
+            <button class="cat-info__edited"><i class ="fa-regular fa-pen-to-square"></i>Редактировать</button>
+            <button class="cat-info__saved cat-info__saved_hidden"><i class ="fa-regular fa-pen-to-square"></i>Сохранить</button>
+            <button class="cat-info__deleted"><i class ="fa-solid fa-trash"></i>Удалить</button>
+
+            <img src="#" class="cat-info__image" loading="lazy">
+            <span class="cat-info__id"></span>
+            <div class="cat-info__title">
+                <h2 class="cat-info__name"></h2>
+            </div>
+            <span class="cat-info__rate"></span>
+            <div class="cat-info__age">
+                <span class="cat-info__age-val"></span>
+                <span class="cat-info__age-text"></span>
+            </div>
+            <p class="cat-info__desc"></p>
+        </div>
+    </template>
     <script src="src/api.js" defer></script>
     <script src="src/popup.js" defer></script>
     <script src="src/popup-image.js" defer></script>
+    <script src="src/cats-info.js" defer></script>
     <script src="src/card.js" defer></script>
     <script src="src/index.js" defer></script>
 
